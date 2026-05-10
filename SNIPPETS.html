@@ -1,0 +1,550 @@
+<!-- 
+  ======================================
+  SNIPPETS E EXEMPLOS DE CUSTOMIZAÇÃO
+  ======================================
+  
+  Copie e cole estes snippets no HTML conforme necessário
+-->
+
+<!-- 
+  1. ADICIONAR GOOGLE ANALYTICS
+  Adicione isto antes do </head>
+-->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+
+
+<!--
+  2. WHATSAPP WIDGET
+  Adicione isto antes do </body>
+-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-whatsapp@1.0.6/dist/whatsapp.min.js"></script>
+<script>
+  var wa_link = {
+    number: "5511999999999", // Seu número com WhatsApp
+    message: "Olá! Gostaria de agendar um serviço 🚗",
+    position: "right"
+  };
+</script>
+
+
+<!--
+  3. FONT AWESOME ICONS
+  Já incluído no index.html
+  Use: <i class="fas fa-icon-name"></i>
+  Encontre mais em: fontawesome.com
+-->
+
+
+<!--
+  4. CUSTOM FORM COM VALIDAÇÃO
+  Adicione no HTML onde quiser o formulário
+-->
+<form id="contactForm" class="custom-form">
+  <div class="form-group">
+    <input type="text" placeholder="Seu Nome" required>
+  </div>
+  <div class="form-group">
+    <input type="email" placeholder="Seu Email" required>
+  </div>
+  <div class="form-group">
+    <input type="tel" placeholder="Seu Telefone" required>
+  </div>
+  <div class="form-group">
+    <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+</form>
+
+<style>
+  .custom-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 193, 7, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .custom-form input,
+  .custom-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+  }
+
+  .custom-form input:focus,
+  .custom-form textarea:focus {
+    outline: none;
+    border-color: #ffc107;
+    background: rgba(255, 193, 7, 0.1);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+  }
+
+  .custom-form input::placeholder,
+  .custom-form textarea::placeholder {
+    color: #aaa;
+  }
+</style>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Validação e envio de dados
+    const name = this.querySelector('input[type="text"]').value;
+    const email = this.querySelector('input[type="email"]').value;
+    const phone = this.querySelector('input[type="tel"]').value;
+    const message = this.querySelector('textarea').value;
+    
+    if (name && email && phone && message) {
+      alert('Mensagem enviada com sucesso!');
+      this.reset();
+    }
+  });
+</script>
+
+
+<!--
+  5. ADICIONAR CHAT DE SUPORTE (Drift/Intercom)
+  Adicione antes do </body>
+-->
+<!-- Drift Chat -->
+<script>
+  "use strict";
+  !function() {
+    var t = window.driftt = window.drift = window.drift || [];
+    if (!t.init) {
+      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+      t.invoked = !0;
+      t.methods = [ "identify", "config", "track", "reset", "ready", "remove", "open", "show", "hide", "off", "on" ];
+      t.factory = function(e) {
+        return function() {
+          var n = Array.prototype.slice.call(arguments);
+          return n.unshift(e), t.push(n), t;
+        };
+      };
+      for (var e = 0; e < t.methods.length; e++) {
+        var n = t.methods[e];
+        t[n] = t.factory(n);
+      }
+      t.load = function(t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+      };
+    }
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('YOUR_DRIFT_ID');
+</script>
+
+
+<!--
+  6. VIDEO DE FUNDO (ao invés de imagem estática)
+  Substitua hero-bg-img por video no index.html
+-->
+<div class="hero-video-bg">
+  <video autoplay muted loop class="hero-video">
+    <source src="assets/hero-video.mp4" type="video/mp4">
+    <img src="assets/hero-placeholder.png" alt="Hero Background">
+  </video>
+  <div class="hero-overlay"></div>
+</div>
+
+<style>
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+
+<!--
+  7. TESTIMONIALS / REVIEWS CAROUSEL
+  Adicione em uma nova seção
+-->
+<section class="testimonials">
+  <div class="container">
+    <h2>O Que Nossos Clientes Dizem</h2>
+    <div class="testimonials-carousel">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="review">Serviço excelente! Veio rápido, fez bem feito e o preço foi justo. Recomendo!"</p>
+        <p class="author">- João Silva</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="review">AutoNest é confiável e profissional. Meu carro ficou perfeito após a manutenção."</p>
+        <p class="author">- Maria Santos</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="review">Melhor serviço que já contratei! 5 estrelas com certeza."</p>
+        <p class="author">- Carlos Oliveira</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+  }
+
+  .testimonials h2 {
+    text-align: center;
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 60px;
+  }
+
+  .testimonials-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .testimonial-card {
+    background: rgba(255, 193, 7, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    background: rgba(255, 193, 7, 0.1);
+    transform: translateY(-10px);
+  }
+
+  .testimonial-card .stars {
+    color: #ffc107;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-card .review {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+
+  .testimonial-card .author {
+    color: #fff;
+    font-weight: 600;
+  }
+</style>
+
+
+<!--
+  8. PRICING TABLE
+  Adicione em uma nova seção
+-->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2 style="text-align: center; color: #fff; margin-bottom: 60px;">Nossos Planos</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Básico</h3>
+        <div class="price">R$ 89</div>
+        <ul>
+          <li>Troca de Óleo</li>
+          <li>Filtro Premium</li>
+          <li>Inspeção Básica</li>
+        </ul>
+        <a href="#booking" class="btn btn-primary">Contratar</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="badge">Mais Popular</div>
+        <h3>Premium</h3>
+        <div class="price">R$ 199</div>
+        <ul>
+          <li>Todos os Serviços</li>
+          <li>Diagnóstico Completo</li>
+          <li>Suporte Prioritário</li>
+          <li>Relatório Detalhado</li>
+        </ul>
+        <a href="#booking" class="btn btn-primary">Contratar</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Profissional</h3>
+        <div class="price">R$ 299</div>
+        <ul>
+          <li>Tudo do Premium</li>
+          <li>Manutenção Trimestral</li>
+          <li>Desconto 20%</li>
+          <li>Chat 24/7</li>
+        </ul>
+        <a href="#booking" class="btn btn-primary">Contratar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing {
+    padding: 120px 0;
+    background: #111;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .pricing-card {
+    background: rgba(255, 193, 7, 0.05);
+    border: 2px solid rgba(255, 193, 7, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .pricing-card.featured {
+    border-color: #ffc107;
+    background: rgba(255, 193, 7, 0.1);
+    transform: scale(1.05);
+  }
+
+  .pricing-card .badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffc107;
+    color: #000;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .pricing-card h3 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .pricing-card .price {
+    color: #ffc107;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .pricing-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+  }
+
+  .pricing-card li {
+    color: #aaa;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 193, 7, 0.1);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-10px) scale(1);
+    box-shadow: 0 20px 60px rgba(255, 193, 7, 0.2);
+  }
+</style>
+
+
+<!--
+  9. BLOG PREVIEW SECTION
+-->
+<section class="blog">
+  <div class="container">
+    <h2 style="text-align: center; color: #fff; margin-bottom: 60px;">Dicas e Artigos</h2>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <img src="assets/blog-1.jpg" alt="Blog">
+        <h3>Como Manter Seu Óleo Do Carro Sempre Limpo</h3>
+        <p>Descubra as melhores práticas para manutenção preventiva...</p>
+        <a href="#" class="read-more">Ler Mais →</a>
+      </article>
+      <article class="blog-card">
+        <img src="assets/blog-2.jpg" alt="Blog">
+        <h3>Quando Trocar o Óleo do Seu Veículo</h3>
+        <p>Saiba quando é a hora certa de fazer a troca...</p>
+        <a href="#" class="read-more">Ler Mais →</a>
+      </article>
+      <article class="blog-card">
+        <img src="assets/blog-3.jpg" alt="Blog">
+        <h3>5 Dicas Para Economizar Com Manutenção</h3>
+        <p>Veja como economizar sem comprometer a qualidade...</p>
+        <a href="#" class="read-more">Ler Mais →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .blog {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .blog-card {
+    background: rgba(255, 193, 7, 0.05);
+    border: 1px solid rgba(255, 193, 7, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .blog-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .blog-card h3 {
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .blog-card p {
+    color: #aaa;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .blog-card .read-more {
+    display: inline-block;
+    padding: 20px;
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffc107;
+  }
+</style>
+
+
+<!--
+  10. FAQ SECTION
+-->
+<section class="faq">
+  <div class="container">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>Qual é o horário de funcionamento?</h4>
+        <p>Funcionamos de segunda a sexta das 7h às 20h, sábados das 8h às 18h, e domingos sob demanda.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Vocês cobrem qual área?</h4>
+        <p>Atendemos toda a região de São Paulo. Para outras cidades, favor consultar disponibilidade.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Como agendar um serviço?</h4>
+        <p>Você pode agendar através do Calendly no nosso site, por WhatsApp ou ligando diretamente.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Quanto tempo leva o atendimento?</h4>
+        <p>Em média, o serviço leva entre 20 a 30 minutos, dependendo do tipo de manutenção.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Qual é a forma de pagamento?</h4>
+        <p>Aceitamos dinheiro, débito, crédito, PIX e transferência bancária.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Há garantia nos serviços?</h4>
+        <p>Sim! Todos os nossos serviços possuem garantia de satisfação e qualidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    padding: 120px 0;
+    background: #111;
+  }
+
+  .faq h2 {
+    text-align: center;
+    color: #ffc107;
+    font-size: 48px;
+    margin-bottom: 60px;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .faq-item {
+    background: rgba(255, 193, 7, 0.05);
+    border-left: 4px solid #ffc107;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    background: rgba(255, 193, 7, 0.1);
+    transform: translateX(10px);
+  }
+
+  .faq-item h4 {
+    color: #ffc107;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .faq-item p {
+    color: #aaa;
+    font-size: 14px;
+  }
+</style>
+
+
+<!-- 
+  ======================================
+  FIM DOS SNIPPETS
+  Copie e cole conforme necessário!
+  ======================================
+-->

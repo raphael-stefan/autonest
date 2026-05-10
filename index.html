@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoNest Mobile Oil Change | Professional On-Site Oil Changes</title>
+  <meta name="description" content="AutoNest Mobile Oil Change - Professional on-site oil change service at your location">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Calendly CSS -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <img src="assets/logo.jpeg" alt="AutoNest Logo" class="logo-img">
+        <span class="brand-name">AutoNest</span>
+      </div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#booking" class="nav-link nav-link-cta">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-video-bg">
+      <img src="assets/hero-placeholder.png" alt="Hero Background" class="hero-bg-img"/>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="word">AutoNest</span>
+          <span class="word">Mobile</span>
+        </h1>
+        <p class="hero-subtitle">Premium Oil Change Service at Your Doorstep</p>
+        <p class="hero-description">Professional service that comes to you. Fast, reliable, and superior quality.</p>
+        
+        <div class="hero-cta">
+          <a href="#booking" class="btn btn-primary btn-lg">
+            <span>Book Now</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#about" class="btn btn-secondary btn-lg">
+            <span>Learn More</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4.9★</span>
+            <span class="stat-label">Rating</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll to discover</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Complete solutions for your vehicle maintenance</p>
+        <div class="header-underline"></div>
+      </div>
+
+      <div class="service-grid">
+        <!-- Service 1: Synthetic Oil -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <i class="fas fa-oil-can"></i>
+            </div>
+            <div class="service-image">
+              <img src="assets/oil-change.png" alt="Synthetic Oil">
+            </div>
+            <h3>Synthetic Oil Change</h3>
+            <p>Premium 100% synthetic oil with professional engine filter included.</p>
+            <div class="service-features">
+              <span><i class="fas fa-check"></i> 100% Synthetic Oil</span>
+              <span><i class="fas fa-check"></i> Premium Filter Included</span>
+              <span><i class="fas fa-check"></i> Any Vehicle Type</span>
+            </div>
+            <div class="service-price"><strong>$100</strong></div>
+            <a href="#booking" class="btn btn-service">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Service 2: Synthetic Blend -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <i class="fas fa-droplet"></i>
+            </div>
+            <div class="service-image">
+              <img src="assets/oil-change.png" alt="Synthetic Blend">
+            </div>
+            <h3>Synthetic Blend Oil Change</h3>
+            <p>Balanced blend oil option with professional engine filter.</p>
+            <div class="service-features">
+              <span><i class="fas fa-check"></i> Synthetic Blend Oil</span>
+              <span><i class="fas fa-check"></i> Premium Filter Included</span>
+              <span><i class="fas fa-check"></i> Any Vehicle Type</span>
+            </div>
+            <div class="service-price"><strong>$90</strong></div>
+            <a href="#booking" class="btn btn-service">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Service 3: Conventional Oil -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <i class="fas fa-oil-can"></i>
+            </div>
+            <div class="service-image">
+              <img src="assets/oil-change.png" alt="Conventional Oil">
+            </div>
+            <h3>Conventional Oil Change</h3>
+            <p>Standard conventional oil with professional engine filter.</p>
+            <div class="service-features">
+              <span><i class="fas fa-check"></i> Conventional Oil</span>
+              <span><i class="fas fa-check"></i> Premium Filter Included</span>
+              <span><i class="fas fa-check"></i> Any Vehicle Type</span>
+            </div>
+            <div class="service-price"><strong>$80</strong></div>
+            <a href="#booking" class="btn btn-service">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Service 4: Battery Service -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <i class="fas fa-battery-full"></i>
+            </div>
+            <div class="service-image">
+              <img src="assets/battery-check.png" alt="Battery">
+            </div>
+            <h3>Battery Service & Check</h3>
+            <p>Complete battery diagnosis and testing at your location.</p>
+            <div class="service-features">
+              <span><i class="fas fa-check"></i> Free Diagnosis</span>
+              <span><i class="fas fa-check"></i> Battery Testing</span>
+              <span><i class="fas fa-check"></i> Expert Assessment</span>
+            </div>
+            <div class="service-price">Call for pricing</div>
+            <a href="#booking" class="btn btn-service">Ask Your Mechanic</a>
+          </div>
+        </div>
+
+        <!-- Service 5: Air Filter + Fluid Check Bundle -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <i class="fas fa-wind"></i>
+            </div>
+            <div class="service-image">
+              <img src="assets/filter-check.png" alt="Air Filter & Fluids">
+            </div>
+            <h3>Air Filter & Fluid Check</h3>
+            <p>Complete inspection and maintenance of filters and fluids.</p>
+            <div class="service-features">
+              <span><i class="fas fa-check"></i> Air Filter Inspection</span>
+              <span><i class="fas fa-check"></i> All Fluids Checked</span>
+              <span><i class="fas fa-check"></i> Top-Up Included</span>
+            </div>
+            <div class="service-price">Call for pricing</div>
+            <a href="#booking" class="btn btn-service">Ask Your Mechanic</a>
+          </div>
+        </div>
+
+        <!-- Service 6: Premium Bundle -->
+        <div class="service-card">
+          <div class="service-card-inner">
+            <div class="service-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <div class="service-image">
+              <img src="assets/primium-package.png" alt="Premium Bundle">
+            </div>
+            <h3>Premium Bundle</h3>
+            <p>Complete vehicle maintenance in one service visit.</p>
+            <div class="service-features">
+              <span><i class="fas fa-check"></i> Synthetic Oil Change</span>
+              <span><i class="fas fa-check"></i> Air Filter Check</span>
+              <span><i class="fas fa-check"></i> Fluid Check & Top-Up</span>
+            </div>
+            <div class="service-price"><strong>$180</strong></div>
+            <a href="#booking" class="btn btn-service">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Why Choose AutoNest?</h2>
+          <p>We are experts in mobile oil change services with first-class professionalism.</p>
+          
+          <div class="about-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Mobile Service</h4>
+                <p>Comes to your location at your preferred time</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Fast & Efficient</h4>
+                <p>Complete service in less than 30 minutes</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Professional Equipment</h4>
+                <p>Premium quality tools and materials</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Full Guarantee</h4>
+                <p>All services backed by satisfaction guarantee</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="feature-text">
+                <h4>Fair Pricing</h4>
+                <p>Complete transparency in all quotes</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="feature-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div class="feature-text">
+                <h4>24/7 Support</h4>
+                <p>Always available when you need us</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img src="assets/about-placeholder.png" alt="About AutoNest">
+          <div class="about-overlay">
+            <p>Professionalism in every detail</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SECTION -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>1000+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-card">
+          <h3>4.9★</h3>
+          <p>Average Rating</p>
+        </div>
+        <div class="stat-card">
+          <h3>5000+</h3>
+          <p>Services Completed</p>
+        </div>
+        <div class="stat-card">
+          <h3>24/7</h3>
+          <p>Availability</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section id="booking" class="booking">
+    <div class="container">
+      <div class="section-header">
+        <h2>Book Your Appointment</h2>
+        <p>Choose the best time for you</p>
+        <div class="header-underline"></div>
+      </div>
+
+      <div class="booking-wrapper">
+        <div class="calendly-inline-widget"
+          data-url="https://calendly.com/raphael-autonestmobile"
+          style="min-width:320px;height:700px;">
+        </div>
+      </div>
+
+      <div class="booking-info">
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h4>Service at Your Home</h4>
+          <p>We serve your location</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-clock"></i>
+          <h4>Flexible Hours</h4>
+          <p>Appointments 24/7</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-phone"></i>
+          <h4>Fast Support</h4>
+          <p>Response in minutes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>AutoNest</h4>
+          <p>Professional mobile oil change and automotive maintenance service.</p>
+          <div class="social-links">
+            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Oil Change</a></li>
+            <li><a href="#services">Battery</a></li>
+            <li><a href="#services">Fluids</a></li>
+            <li><a href="#services">Tires</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> hello@autonest.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> United States</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Hours</h4>
+          <ul>
+            <li>Monday - Friday: 07:00 AM - 08:00 PM</li>
+            <li>Saturday: 08:00 AM - 06:00 PM</li>
+            <li>Sunday: On Demand</li>
+            <li>Holidays: Available</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 AutoNest Mobile Oil Change. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calendly Script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+  
+  <!-- Ultra-Direct Scroll Handler - GUARANTEED to work -->
+  <script>
+    // IMMEDIATE click capture on any element
+    document.addEventListener('click', function(event) {
+      // Check if clicked element or its parent is an <a> tag with href="#booking"
+      let target = event.target;
+      let bookingLink = null;
+      
+      // Traverse up the DOM tree to find the link
+      while (target && target !== document) {
+        if (target.tagName === 'A' && target.getAttribute('href') === '#booking') {
+          bookingLink = target;
+          break;
+        }
+        target = target.parentElement;
+      }
+      
+      if (bookingLink) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        console.log('✅ Booking link clicked - scrolling...');
+        
+        const bookingSection = document.getElementById('booking');
+        if (bookingSection) {
+          bookingSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          console.log('✅ Scrolled to booking!');
+        }
+      }
+    }, true); // Use capture phase to catch all clicks
+  </script>
+  
+  <!-- Main Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>

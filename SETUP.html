@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup Guide - AutoNest Mobile Oil Change</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      color: #fff;
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 193, 7, 0.05);
+      border: 1px solid rgba(255, 193, 7, 0.2);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    
+    h1 {
+      color: #ffc107;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 36px;
+    }
+    
+    h2 {
+      color: #ffc107;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    
+    p {
+      margin-bottom: 15px;
+      line-height: 1.8;
+      color: #ddd;
+    }
+    
+    .step {
+      background: rgba(255, 193, 7, 0.05);
+      border-left: 4px solid #ffc107;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    
+    .step h3 {
+      color: #ffc107;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    
+    code {
+      background: #000;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+      color: #ffc107;
+    }
+    
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+      display: inline-block;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+      color: #000;
+      box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(255, 193, 7, 0.5);
+    }
+    
+    .highlight {
+      background: rgba(255, 193, 7, 0.1);
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    
+    .file-list {
+      background: #000;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 14px;
+      overflow-x: auto;
+    }
+    
+    .success-icon {
+      display: inline-block;
+      color: #ffc107;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚗 AutoNest Mobile Oil Change</h1>
+    <h1 style="font-size: 20px; color: #aaa; margin-top: -20px;">Setup & Customization Guide</h1>
+    
+    <div class="highlight">
+      <p>✅ <strong>Seu website está 100% funcional e pronto!</strong> Agora é hora de customizar com suas informações e imagens reais.</p>
+    </div>
+
+    <h2>📂 Arquivos Criados</h2>
+    <div class="file-list">
+index.html              (Estrutura HTML)<br>
+styles.css              (Estilos e Animações)<br>
+script.js               (Interatividades)<br>
+config.json             (Configurações)<br>
+README.md               (Documentação)<br>
+assets/                 (Pasta de Imagens)<br>
+├── logo.jpeg<br>
+├── hero-placeholder.png<br>
+├── about-placeholder.png<br>
+└── service-placeholder.png
+    </div>
+
+    <h2>🚀 Primeiros Passos</h2>
+
+    <div class="step">
+      <h3><span class="success-icon">1.</span> Abra o Website</h3>
+      <p>Abra o arquivo <code>index.html</code> no seu navegador ou use Live Server no VS Code (clique "Go Live")</p>
+    </div>
+
+    <div class="step">
+      <h3><span class="success-icon">2.</span> Substitua as Imagens</h3>
+      <ul>
+        <li><code>assets/logo.jpeg</code> - Logo da sua empresa</li>
+        <li><code>assets/hero-placeholder.png</code> - Imagem de fundo principal</li>
+        <li><code>assets/about-placeholder.png</code> - Imagem da seção sobre</li>
+        <li><code>assets/service-placeholder.png</code> - Imagens dos serviços</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h3><span class="success-icon">3.</span> Configure o Calendly</h3>
+      <p>No arquivo <code>index.html</code>, encontre a linha com Calendly e substitua:</p>
+      <code>https://calendly.com/raphael-autonestmobile</code>
+      <p style="margin-top: 10px;">Pela sua URL do Calendly:</p>
+      <code>https://calendly.com/seu-username</code>
+    </div>
+
+    <div class="step">
+      <h3><span class="success-icon">4.</span> Atualize os Textos</h3>
+      <ul>
+        <li>Abra <code>index.html</code></li>
+        <li>Atualize telefone, email e endereço no footer</li>
+        <li>Modifique preços dos serviços conforme necessário</li>
+        <li>Atualize os horários de atendimento</li>
+        <li>Personalize descrições dos serviços</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <h3><span class="success-icon">5.</span> Customize as Cores (Opcional)</h3>
+      <p>A cor primária é <code>#ffc107</code> (Ouro). Para mudar:</p>
+      <ul>
+        <li>Abra <code>styles.css</code></li>
+        <li>Use Ctrl+F (Cmd+F no Mac) para procurar <code>#ffc107</code></li>
+        <li>Substitua pela cor desejada</li>
+      </ul>
+    </div>
+
+    <h2>✨ Recursos Já Implementados</h2>
+    <ul>
+      <li><span class="success-icon">✓</span> <strong>Animações Profissionais</strong> - Fade, Slide, Zoom, Parallax, Stagger</li>
+      <li><span class="success-icon">✓</span> <strong>Menu Mobile</strong> - Totalmente responsivo com hamburger menu</li>
+      <li><span class="success-icon">✓</span> <strong>Integração Calendly</strong> - Sistema de agendamento profissional</li>
+      <li><span class="success-icon">✓</span> <strong>Scroll Effects</strong> - Animações ao fazer scroll</li>
+      <li><span class="success-icon">✓</span> <strong>Dark Mode</strong> - Design moderno em tema escuro</li>
+      <li><span class="success-icon">✓</span> <strong>Performance</strong> - Otimizado com CSS animations</li>
+      <li><span class="success-icon">✓</span> <strong>Acessibilidade</strong> - Navegação por teclado e leitores de tela</li>
+      <li><span class="success-icon">✓</span> <strong>SEO Básico</strong> - Meta tags, headings semânticos</li>
+    </ul>
+
+    <h2>🎨 Seções do Website</h2>
+    <ul>
+      <li><strong>Hero Section</strong> - Apresentação impactante com chamada à ação</li>
+      <li><strong>Serviços</strong> - 6 cards com animações hover</li>
+      <li><strong>Sobre Nós</strong> - Diferenciais e features</li>
+      <li><strong>Estatísticas</strong> - Números que impressionam</li>
+      <li><strong>Agendamento</strong> - Calendly integrado</li>
+      <li><strong>Footer</strong> - Informações de contato e redes sociais</li>
+    </ul>
+
+    <h2>📱 Responsividade</h2>
+    <p>O site funciona perfeitamente em:</p>
+    <ul>
+      <li>Desktop (1200px+)</li>
+      <li>Tablet (769px - 1199px)</li>
+      <li>Mobile (até 768px)</li>
+    </ul>
+
+    <h2>🔗 Links Úteis</h2>
+    <ul>
+      <li><a href="https://calendly.com" style="color: #ffc107;">Calendly - Agendamentos</a></li>
+      <li><a href="https://netlify.com" style="color: #ffc107;">Netlify - Hospedagem Grátis</a></li>
+      <li><a href="https://pages.github.com" style="color: #ffc107;">GitHub Pages - Hospedagem</a></li>
+      <li><a href="https://tinypng.com" style="color: #ffc107;">TinyPNG - Comprimir Imagens</a></li>
+    </ul>
+
+    <h2>📋 Checklist Antes de Ir ao Ar</h2>
+    <ul>
+      <li>☐ Atualizar logo com marca real</li>
+      <li>☐ Substituir todas as imagens placeholder</li>
+      <li>☐ Configurar Calendly</li>
+      <li>☐ Atualizar telefone e email</li>
+      <li>☐ Verificar todos os preços</li>
+      <li>☐ Testar em mobile</li>
+      <li>☐ Testar em diferentes navegadores</li>
+      <li>☐ Verificar todos os links</li>
+      <li>☐ Testar agendamentos pelo Calendly</li>
+      <li>☐ Ativar SSL certificate</li>
+    </ul>
+
+    <h2>🚀 Deploy</h2>
+    <p>Escolha uma plataforma para colocar seu site no ar:</p>
+    
+    <div class="highlight">
+      <p><strong>Opção 1: Netlify (Recomendado)</strong></p>
+      <ol>
+        <li>Vá em <code>netlify.com</code></li>
+        <li>Arraste a pasta do projeto</li>
+        <li>Pronto! Seu site está ao vivo</li>
+      </ol>
+    </div>
+
+    <div class="highlight">
+      <p><strong>Opção 2: GitHub Pages</strong></p>
+      <ol>
+        <li>Crie um repositório no GitHub</li>
+        <li>Faça upload dos arquivos</li>
+        <li>Ative GitHub Pages nas configurações</li>
+      </ol>
+    </div>
+
+    <h2>💡 Dicas de Customização Avançadas</h2>
+    <ul>
+      <li><strong>Ativar Efeito de Partículas:</strong> Abra <code>script.js</code> e procure por <code>// createParticles();</code></li>
+      <li><strong>Mudar Velocidade de Animações:</strong> Procure por <code>0.8s</code> nos valores de animação</li>
+      <li><strong>Adicionar Google Analytics:</strong> Adicione seu tracking ID no HTML</li>
+      <li><strong>Adicionar WhatsApp Widget:</strong> Existem várias bibliotecas disponíveis</li>
+      <li><strong>Modo Claro:</strong> Descomente <code>addThemeToggle()</code> no script.js</li>
+    </ul>
+
+    <h2>🆘 Ajuda & Suporte</h2>
+    <p>Se precisar de ajuda:</p>
+    <ul>
+      <li>Consulte o arquivo <code>README.md</code> para documentação completa</li>
+      <li>Verifique o arquivo <code>config.json</code> para todas as configurações</li>
+      <li>Teste as animações no navegador</li>
+      <li>Use as ferramentas de desenvolvedor (F12) para debugar</li>
+    </ul>
+
+    <div class="button-group">
+      <a href="index.html" class="btn btn-primary">Ver Website Agora →</a>
+    </div>
+
+    <h2 style="margin-top: 50px; text-align: center; color: #888;">---</h2>
+    <p style="text-align: center; margin-top: 30px; color: #888;">
+      <strong style="color: #fff;">🎉 Seu website está pronto para conquistar clientes!</strong><br>
+      Divirta-se customizando e não hesite em explorar as possibilidades das animações.
+    </p>
+  </div>
+</body>
+</html>

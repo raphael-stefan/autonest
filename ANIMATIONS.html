@@ -1,0 +1,520 @@
+<!-- 
+  GUIA VISUAL DE ANIMAÇÕES
+  Visualize e customize as animações do seu site
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoNest - Animações & Customizações</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffc107;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+
+    h2 {
+      color: #ffc107;
+      margin-top: 60px;
+      margin-bottom: 30px;
+      font-size: 24px;
+      border-bottom: 2px solid #ffc107;
+      padding-bottom: 10px;
+    }
+
+    .animation-demo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .demo-box {
+      background: rgba(255, 193, 7, 0.05);
+      border: 2px solid rgba(255, 193, 7, 0.2);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .demo-box:hover {
+      border-color: #ffc107;
+      background: rgba(255, 193, 7, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .demo-box h3 {
+      font-size: 18px;
+      color: #ffc107;
+      margin-bottom: 20px;
+    }
+
+    .demo-element {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #ffc107, #ffb300);
+      border-radius: 10px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #000;
+      font-size: 14px;
+    }
+
+    /* Animações */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.5); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes rotateIn {
+      from { opacity: 0; transform: rotate(-180deg); }
+      to { opacity: 1; transform: rotate(0deg); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    @keyframes flip {
+      0% { transform: perspective(400px) rotateY(0); }
+      100% { transform: perspective(400px) rotateY(360deg); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 5px rgba(255, 193, 7, 0.3); }
+      50% { box-shadow: 0 0 30px rgba(255, 193, 7, 0.8); }
+    }
+
+    .demo-box.fadeInUp .demo-element {
+      animation: fadeInUp 0.8s ease-out infinite;
+    }
+
+    .demo-box.slideInLeft .demo-element {
+      animation: slideInLeft 0.8s ease-out infinite;
+    }
+
+    .demo-box.slideInRight .demo-element {
+      animation: slideInRight 0.8s ease-out infinite;
+    }
+
+    .demo-box.scaleIn .demo-element {
+      animation: scaleIn 0.8s ease-out infinite;
+    }
+
+    .demo-box.rotateIn .demo-element {
+      animation: rotateIn 0.8s ease-out infinite;
+    }
+
+    .demo-box.bounce .demo-element {
+      animation: bounce 0.8s ease-out infinite;
+    }
+
+    .demo-box.pulse .demo-element {
+      animation: pulse 1s ease-out infinite;
+    }
+
+    .demo-box.flip .demo-element {
+      animation: flip 1s ease-out infinite;
+    }
+
+    .demo-box.shake .demo-element {
+      animation: shake 0.5s ease-out infinite;
+    }
+
+    .demo-box.glow .demo-element {
+      animation: glow 1s ease-out infinite;
+    }
+
+    .info-section {
+      background: rgba(255, 193, 7, 0.05);
+      border-left: 4px solid #ffc107;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    .info-section h3 {
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    .info-section p {
+      color: #ddd;
+      line-height: 1.8;
+    }
+
+    code {
+      background: #000;
+      padding: 2px 6px;
+      border-radius: 3px;
+      color: #ffc107;
+      font-family: monospace;
+    }
+
+    .code-block {
+      background: #000;
+      border: 1px solid #ffc107;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 12px;
+      color: #0f0;
+    }
+
+    .customization-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .customization-table th {
+      background: rgba(255, 193, 7, 0.1);
+      color: #ffc107;
+      padding: 15px;
+      text-align: left;
+      border: 1px solid rgba(255, 193, 7, 0.2);
+    }
+
+    .customization-table td {
+      padding: 15px;
+      border: 1px solid rgba(255, 193, 7, 0.1);
+      color: #ddd;
+    }
+
+    .customization-table tr:hover {
+      background: rgba(255, 193, 7, 0.05);
+    }
+
+    .tips {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0.05) 100%);
+      border: 1px solid rgba(255, 193, 7, 0.2);
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 30px;
+    }
+
+    .tips h3 {
+      color: #ffc107;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .tips ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .tips li {
+      padding: 10px 0;
+      padding-left: 25px;
+      position: relative;
+      color: #ddd;
+    }
+
+    .tips li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #ffc107;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      border-top: 1px solid rgba(255, 193, 7, 0.2);
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 AutoNest - Guia de Animações</h1>
+
+    <h2>Animações Disponíveis</h2>
+    <p style="margin-bottom: 20px; color: #aaa;">Clique ou passe o mouse em cada caixa para ver a animação em ação:</p>
+
+    <div class="animation-demo">
+      <div class="demo-box fadeInUp">
+        <h3>Fade In Up</h3>
+        <div class="demo-element">Fade</div>
+      </div>
+
+      <div class="demo-box slideInLeft">
+        <h3>Slide In Left</h3>
+        <div class="demo-element">Slide L</div>
+      </div>
+
+      <div class="demo-box slideInRight">
+        <h3>Slide In Right</h3>
+        <div class="demo-element">Slide R</div>
+      </div>
+
+      <div class="demo-box scaleIn">
+        <h3>Scale In</h3>
+        <div class="demo-element">Scale</div>
+      </div>
+
+      <div class="demo-box rotateIn">
+        <h3>Rotate In</h3>
+        <div class="demo-element">Rotate</div>
+      </div>
+
+      <div class="demo-box bounce">
+        <h3>Bounce</h3>
+        <div class="demo-element">Bounce</div>
+      </div>
+
+      <div class="demo-box pulse">
+        <h3>Pulse</h3>
+        <div class="demo-element">Pulse</div>
+      </div>
+
+      <div class="demo-box flip">
+        <h3>Flip</h3>
+        <div class="demo-element">Flip</div>
+      </div>
+
+      <div class="demo-box shake">
+        <h3>Shake</h3>
+        <div class="demo-element">Shake</div>
+      </div>
+
+      <div class="demo-box glow">
+        <h3>Glow</h3>
+        <div class="demo-element">Glow</div>
+      </div>
+    </div>
+
+    <h2>Como Customizar as Animações</h2>
+
+    <div class="info-section">
+      <h3>1. Alterar Duração da Animação</h3>
+      <p>No arquivo <code>styles.css</code>, encontre a animação desejada e mude o tempo:</p>
+      <div class="code-block">
+/* Padrão: 0.8s */<br>
+animation: fadeInUp 0.8s ease-out;<br>
+<br>
+/* Mais rápido: 0.3s */<br>
+animation: fadeInUp 0.3s ease-out;<br>
+<br>
+/* Mais lento: 1.5s */<br>
+animation: fadeInUp 1.5s ease-out;
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h3>2. Alterar Timing Function</h3>
+      <p>Escolha entre <code>ease-out</code>, <code>ease-in</code>, <code>ease-in-out</code>, <code>linear</code>:</p>
+      <div class="code-block">
+ease-out: Começa rápido e termina devagar<br>
+ease-in: Começa devagar e termina rápido<br>
+ease-in-out: Devagar no início e fim<br>
+linear: Velocidade constante
+      </div>
+    </div>
+
+    <div class="info-section">
+      <h3>3. Criar Novas Animações</h3>
+      <p>Adicione no CSS:</p>
+      <div class="code-block">
+@keyframes meuaEfeit {<br>
+&nbsp;&nbsp;0% { opacity: 0; transform: translateX(-50px); }<br>
+&nbsp;&nbsp;50% { opacity: 0.5; }<br>
+&nbsp;&nbsp;100% { opacity: 1; transform: translateX(0); }<br>
+}<br>
+<br>
+.elemento {<br>
+&nbsp;&nbsp;animation: minhaAnimacao 1s ease-out;<br>
+}
+      </div>
+    </div>
+
+    <h2>Parâmetros de Customização</h2>
+    <table class="customization-table">
+      <tr>
+        <th>Elemento</th>
+        <th>Propriedade CSS</th>
+        <th>Valor Padrão</th>
+        <th>Onde Está</th>
+      </tr>
+      <tr>
+        <td>Cor Primária</td>
+        <td>--primary-color</td>
+        <td>#ffc107</td>
+        <td>styles.css</td>
+      </tr>
+      <tr>
+        <td>Cor Secundária</td>
+        <td>--secondary-color</td>
+        <td>#ffb300</td>
+        <td>styles.css</td>
+      </tr>
+      <tr>
+        <td>Fundo</td>
+        <td>background</td>
+        <td>#0a0a0a</td>
+        <td>styles.css (body)</td>
+      </tr>
+      <tr>
+        <td>Duração Animação</td>
+        <td>animation-duration</td>
+        <td>0.8s</td>
+        <td>styles.css (@keyframes)</td>
+      </tr>
+      <tr>
+        <td>Transição Hover</td>
+        <td>transition</td>
+        <td>0.3s ease</td>
+        <td>styles.css (.btn, .card)</td>
+      </tr>
+      <tr>
+        <td>Tamanho Fonte</td>
+        <td>font-size</td>
+        <td>Variável</td>
+        <td>styles.css</td>
+      </tr>
+    </table>
+
+    <div class="tips">
+      <h3>💡 Dicas Profissionais</h3>
+      <ul>
+        <li>Use animações de 0.3s a 0.8s para melhor experiência do usuário</li>
+        <li>Não anime mais de 2-3 elementos simultaneamente para não ficar lento</li>
+        <li>Use <code>ease-out</code> para animações de entrada</li>
+        <li>Use <code>ease-in</code> para animações de saída</li>
+        <li>Evite animações muito complexas em mobile</li>
+        <li>Teste em diferentes navegadores para compatibilidade</li>
+        <li>Use <code>transform</code> ao invés de mudar posição (melhor performance)</li>
+        <li>Combine animações para criar efeitos interessantes</li>
+        <li>Use <code>animation-delay</code> para criar cascatas de animações</li>
+        <li>Verifique o FPS com DevTools (F12) para otimizar performance</li>
+      </ul>
+    </div>
+
+    <h2>Exemplo Prático: Criar Efeito Customizado</h2>
+
+    <div class="info-section">
+      <h3>Scenario: Animar card ao passar o mouse</h3>
+      <p>HTML:</p>
+      <div class="code-block">
+&lt;div class="custom-card"&gt;<br>
+&nbsp;&nbsp;&lt;h3&gt;Meu Card&lt;/h3&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;Conteúdo aqui&lt;/p&gt;<br>
+&lt;/div&gt;
+      </div>
+
+      <p style="margin-top: 15px;">CSS:</p>
+      <div class="code-block">
+@keyframes slideUp {<br>
+&nbsp;&nbsp;from {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;opacity: 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;transform: translateY(30px);<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;to {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;opacity: 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;transform: translateY(0);<br>
+&nbsp;&nbsp;}<br>
+}<br>
+<br>
+.custom-card {<br>
+&nbsp;&nbsp;background: rgba(255, 193, 7, 0.05);<br>
+&nbsp;&nbsp;padding: 20px;<br>
+&nbsp;&nbsp;border-radius: 10px;<br>
+&nbsp;&nbsp;transition: all 0.3s ease;<br>
+&nbsp;&nbsp;animation: slideUp 0.8s ease-out;<br>
+}<br>
+<br>
+.custom-card:hover {<br>
+&nbsp;&nbsp;background: rgba(255, 193, 7, 0.1);<br>
+&nbsp;&nbsp;transform: translateY(-10px);<br>
+&nbsp;&nbsp;box-shadow: 0 20px 40px rgba(255, 193, 7, 0.2);<br>
+}
+      </div>
+    </div>
+
+    <div class="tips">
+      <h3>🎯 Performance Tips</h3>
+      <ul>
+        <li>Use DevTools (F12 → Performance) para medir animações</li>
+        <li>Prefira CSS animations a JavaScript animations</li>
+        <li>Use <code>transform</code> e <code>opacity</code> para melhor performance</li>
+        <li>Evite animar <code>width</code>, <code>height</code>, <code>left</code>, <code>top</code></li>
+        <li>Teste em dispositivos móveis reais</li>
+        <li>Use <code>will-change</code> com moderação</li>
+        <li>GPU acceleration com <code>transform: translateZ(0)</code></li>
+        <li>Desative animações em <code>@media (prefers-reduced-motion)</code></li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>🚗 AutoNest Mobile Oil Change - Guia de Animações & Customizações</p>
+      <p style="margin-top: 10px; font-size: 12px;">Para mais informações, consulte README.md ou SETUP.html</p>
+    </footer>
+  </div>
+</body>
+</html>

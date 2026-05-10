@@ -1,0 +1,187 @@
+{
+  "site": {
+    "name": "AutoNest Mobile Oil Change",
+    "description": "Serviço profissional de troca de óleo a domicílio",
+    "language": "pt-BR",
+    "timezone": "America/Sao_Paulo"
+  },
+  "branding": {
+    "primary_color": "#ffc107",
+    "secondary_color": "#ffb300",
+    "accent_color": "#000",
+    "background": "#0a0a0a",
+    "text_primary": "#ffffff",
+    "text_secondary": "#aaaaaa"
+  },
+  "social": {
+    "facebook": "https://facebook.com/autonestmobile",
+    "instagram": "https://instagram.com/autonestmobile",
+    "whatsapp": "+5511999999999",
+    "email": "contato@autonest.com"
+  },
+  "contact": {
+    "phone": "+55 (11) 9999-9999",
+    "email": "contato@autonest.com",
+    "address": "São Paulo, SP",
+    "hours": {
+      "monday_friday": "07:00 - 20:00",
+      "saturday": "08:00 - 18:00",
+      "sunday": "Sob Demanda",
+      "holidays": "Disponível"
+    }
+  },
+  "services": [
+    {
+      "id": 1,
+      "name": "Troca de Óleo Premium",
+      "description": "Óleo sintético de alta qualidade com filtro de motor profissional",
+      "price": 89,
+      "icon": "fas fa-oil-can"
+    },
+    {
+      "id": 2,
+      "name": "Serviço de Bateria",
+      "description": "Diagnóstico completo, teste e substituição se necessário",
+      "price": 120,
+      "icon": "fas fa-battery-full"
+    },
+    {
+      "id": 3,
+      "name": "Verificação de Fluidos",
+      "description": "Inspeção e reposição de todos os fluidos do veículo",
+      "price": 45,
+      "icon": "fas fa-water"
+    },
+    {
+      "id": 4,
+      "name": "Verificação de Pneus",
+      "description": "Pressão, desgaste e balanceamento profissional",
+      "price": 60,
+      "icon": "fas fa-tire"
+    },
+    {
+      "id": 5,
+      "name": "Manutenção Geral",
+      "description": "Inspeção completa e manutenção preventiva do veículo",
+      "price": 150,
+      "icon": "fas fa-wrench"
+    },
+    {
+      "id": 6,
+      "name": "Pacote Premium",
+      "description": "Todos os serviços combinados com desconto especial",
+      "price": 299,
+      "icon": "fas fa-star"
+    }
+  ],
+  "statistics": {
+    "satisfied_customers": 1000,
+    "rating": "4.9",
+    "services_completed": 5000,
+    "availability": "24/7"
+  },
+  "calendly": {
+    "url": "https://calendly.com/raphael-autonestmobile",
+    "description": "Sistema de agendamento profissional integrado"
+  },
+  "features": {
+    "mobile_service": true,
+    "24_7_support": true,
+    "professional_equipment": true,
+    "honest_pricing": true,
+    "online_booking": true,
+    "warranty": true
+  },
+  "animations": {
+    "fade_in_up": "fadeInUp 0.8s ease-out",
+    "slide_in_left": "slideInLeft 0.8s ease-out",
+    "slide_in_right": "slideInRight 0.8s ease-out",
+    "scale_in": "scaleIn 0.8s ease-out",
+    "rotate_icon": "rotateIcon 0.6s ease",
+    "bounce": "bounce 2s ease-in-out infinite",
+    "zoom": "zoom 30s ease-in-out infinite alternate"
+  },
+  "customization": {
+    "logo_path": "assets/logo.jpeg",
+    "hero_image_path": "assets/hero-placeholder.png",
+    "about_image_path": "assets/about-placeholder.png",
+    "service_image_path": "assets/service-placeholder.png",
+    "favicon": "assets/logo.jpeg"
+  },
+  "performance": {
+    "lazy_loading": true,
+    "css_animations": true,
+    "vanilla_js": true,
+    "no_dependencies": true,
+    "responsive_design": true
+  },
+  "seo": {
+    "title": "AutoNest Mobile Oil Change | Troca de Óleo a Domicílio",
+    "description": "Serviço profissional de troca de óleo em seu endereço. Rápido, confiável e de qualidade superior.",
+    "keywords": [
+      "troca de óleo",
+      "mobile oil change",
+      "manutenção automotiva",
+      "serviço a domicílio",
+      "São Paulo"
+    ],
+    "lang": "pt-BR"
+  },
+  "deployment": {
+    "platforms": [
+      {
+        "name": "GitHub Pages",
+        "type": "Free",
+        "setup": "https://pages.github.com/"
+      },
+      {
+        "name": "Netlify",
+        "type": "Free",
+        "setup": "https://netlify.com/"
+      },
+      {
+        "name": "Vercel",
+        "type": "Free",
+        "setup": "https://vercel.com/"
+      },
+      {
+        "name": "AWS S3",
+        "type": "Paid",
+        "setup": "https://aws.amazon.com/s3/"
+      }
+    ]
+  },
+  "tips": {
+    "before_launch": [
+      "Atualizar todas as imagens com fotos reais",
+      "Verificar todos os preços dos serviços",
+      "Configurar Calendly com seus horários",
+      "Atualizar informações de contato",
+      "Testar em todos os navegadores",
+      "Validar responsividade em mobile",
+      "Ativar Google Analytics",
+      "Configurar SSL certificate",
+      "Testar performance com PageSpeed",
+      "Criar sitemap.xml"
+    ],
+    "marketing": [
+      "Compartilhar nas redes sociais",
+      "Adicionar WhatsApp business widget",
+      "Criar Google My Business",
+      "Pedir avaliações de clientes",
+      "Implementar chat de suporte",
+      "Usar Google Search Console",
+      "Criar blog com conteúdo",
+      "Email marketing para clientes"
+    ],
+    "maintenance": [
+      "Atualizar preços regularmente",
+      "Monitorar performance",
+      "Verificar links mortos",
+      "Atualizar conteúdo sazonalmente",
+      "Fazer backup regular",
+      "Monitorar segurança",
+      "Responder comentários/reviews"
+    ]
+  }
+}
