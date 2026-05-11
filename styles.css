@@ -378,13 +378,17 @@ body {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 30px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   animation: bounce 2s ease-in-out infinite;
   cursor: pointer;
-  z-index: 2;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
 }
 
 .scroll-indicator span {
@@ -551,7 +555,14 @@ body {
   height: 200%;
   background: linear-gradient(135deg, transparent, rgba(255, 193, 7, 0.2), transparent);
   transform: rotate(45deg);
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-card-inner::before {
   animation: shimmer 3s infinite;
+  opacity: 1;
 }
 
 .service-card:hover .service-card-inner {
@@ -1084,6 +1095,21 @@ footer {
 
   .booking-wrapper .calendly-inline-widget {
     min-height: 400px !important;
+  }
+
+  .scroll-indicator {
+    bottom: 40px;
+    padding: 12px 15px;
+    font-size: 12px;
+  }
+
+  .scroll-indicator span {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .scroll-indicator i {
+    font-size: 16px;
   }
 }
 
