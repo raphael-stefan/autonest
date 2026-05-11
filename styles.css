@@ -378,7 +378,7 @@ body {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -389,17 +389,17 @@ body {
 
 .scroll-indicator span {
   display: block;
-  font-size: 14px;
+  font-size: 11px;
   color: #ffc107;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   font-weight: 600;
 }
 
 .scroll-indicator i {
   color: #ffc107;
-  font-size: 28px;
+  font-size: 20px;
   animation: bounce 2s ease-in-out infinite;
   display: block;
 }
