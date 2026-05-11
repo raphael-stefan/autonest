@@ -378,32 +378,30 @@ body {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 60px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   animation: bounce 2s ease-in-out infinite;
   cursor: pointer;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 15px 20px;
-  border-radius: 50px;
-  backdrop-filter: blur(10px);
 }
 
 .scroll-indicator span {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   color: #ffc107;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
 }
 
 .scroll-indicator i {
   color: #ffc107;
-  font-size: 20px;
+  font-size: 28px;
   animation: bounce 2s ease-in-out infinite;
+  display: block;
 }
 
 /* ====================================
@@ -1134,17 +1132,15 @@ footer {
 
   .scroll-indicator {
     bottom: 40px;
-    padding: 12px 15px;
-    font-size: 12px;
   }
 
   .scroll-indicator span {
-    font-size: 10px;
-    margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 8px;
   }
 
   .scroll-indicator i {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 
