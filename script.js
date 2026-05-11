@@ -35,6 +35,69 @@ if (mobileMenuToggle) {
 }
 
 // ====================================
+// MOBILE CAROUSEL - Services
+// ====================================
+
+function initMobileCarousel() {
+  const serviceGrid = document.querySelector('.service-grid');
+  
+  if (!serviceGrid) return;
+  
+  // Only enable carousel on mobile
+  if (window.innerWidth <= 768) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    serviceGrid.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - serviceGrid.offsetLeft;
+      scrollLeft = serviceGrid.scrollLeft;
+      serviceGrid.style.cursor = 'grabbing';
+    });
+
+    serviceGrid.addEventListener('mouseleave', () => {
+      isDown = false;
+      serviceGrid.style.cursor = 'grab';
+    });
+
+    serviceGrid.addEventListener('mouseup', () => {
+      isDown = false;
+      serviceGrid.style.cursor = 'grab';
+    });
+
+    serviceGrid.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - serviceGrid.offsetLeft;
+      const walk = (x - startX) * 2;
+      serviceGrid.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch support for mobile
+    serviceGrid.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      scrollLeft = serviceGrid.scrollLeft;
+    });
+
+    serviceGrid.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].clientX;
+      const walk = (startX - x) * 2;
+      serviceGrid.scrollLeft = scrollLeft + walk;
+    });
+  }
+}
+
+// Initialize carousel when DOM is ready
+document.addEventListener('DOMContentLoaded', initMobileCarousel);
+window.addEventListener('load', initMobileCarousel);
+
+// Reinitialize on window resize
+window.addEventListener('resize', () => {
+  initMobileCarousel();
+});
+
+// ====================================
 // SMOOTH SCROLL & NAVBAR ANIMATION
 // ====================================
 
